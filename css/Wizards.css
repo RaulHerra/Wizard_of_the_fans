@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+html, body{
+    color: white;
+    background-color: #121212;
+    scroll-behavior: smooth;
+}
+h1.tituloIndex{
+    background-color: #B3714A;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 500px;
+}
+ol{
+    list-style: lower-roman;
+}
+b{
+    color: #C8371B;
+}
+
+h1.tituloIndex font{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*css para el header*/
+#capa1{ position:absolute; z-index:1; }
+header{
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    background-color: #101010;
+}
+header.borde{
+    border-bottom: 3px solid #C8371B;
+    border-style: solid;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}
+div.cabecera{
+    float: left;
+}
+li.cabecera{
+    flex-wrap: nowrap;
+    float: left;
+    text-align: center;
+}
+header nav{
+    float: right ;
+    line-height: 105px;
+}
+header nav a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: xx-large;
+}
+header nav a:hover{
+    color: #fff;
+    background-color: #c8381baa;
+    border-radius: 10px;
+    transition: background-color 1s;    
+}
+.inicio{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+div.inicio{
+    margin-top: 0px;
+}
+ul.cabecera{
+    list-style: none;
+}
+
+/*css para la barra lateral*/
+.navegacion{
+    position: fixed;
+    width: 40px;
+    height: 100%;
+    background-color: #C8371B;
+    transition: 0.5s ease;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 105px;
+}
+.navegacion:hover{
+    width: 10rem;
+    transition: 0.5s ease;
+}
+.navegacion ul{
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.navegacion ul li{
+    width: 100%;
+    list-style: none;
+}
+.navegacion ul li:hover{
+    background-color: #A81700;
+    align-items: center;
+    
+}
+.navegacion ul li a{
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navegacion ul li a .icono{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+}
+.navegacion ul li a span img{
+    width: 30px;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+/*css para las imagenes en "Colores"*/
+section{
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+    transition: 0.5s ease;
+}
+
+/*css para el footer*/
+div.footer{
+    position: absolute;
+    background-color: #080808;
+    border-top: 3px solid #C8371B;
+    padding-bottom: 30px;
+    margin-bottom: -20px;
+}
+table{
+    width: 100%;
+}
+table th{
+    width: 25%;
+    text-align: center;
+    font-size: xx-large;
+}
+table td{
+    width: 25%;
+    color: #444;
+    text-align: center;
+    vertical-align: top;
+}
+table a{
+    color: #444;
+    text-decoration: none;
+}
+
+/*css para girar cartas*/
+.carta-box {
+    margin: 30px;
+    width: 300px;
+    height: 416px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.carta-box:hover .carta {
+    transform: rotateY(180deg);
+}
+
+.carta {
+    transform-style: preserve-3d;
+    transition: all 2s linear;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.cara.detras {
+    transform: rotateY(180deg);
+}
+p.bajoCarta{
+    margin-top: -130px;
+}
+.carta-box img{
+    border-radius: 20px;
+}
+
+/*Mostrar imagen en un a*/
+/*Para diferenciar a los a simples*/
+a.simple{
+    color: #C8371B;
+}
+a.mostrarImagen {
+    position: relative;
+    color: #C8371B;
+}
+
+a.mostrarImagen img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    display: none;
+}
+
+a.mostrarImagen:hover img {
+    display: flex;
+    z-index: 1;
+}
+
+/*Cartas que crecen al hover*/
+img.crecer{
+    width: 200px;
+    height: 200px;
+    transition: 1s ease;
+    border-radius: 10px;
+    margin: 25px;
+}
+img.crecer:hover{
+    width: 250px;
+    height: 250px;
+    transition: 1s ease;
+    border-radius: 50%;
+}
+
+/*Tabla expansiones*/
+table.expansiones{
+    border: 10px;
+    border-style: none;
+    border-radius: 20px;
+}
+
+table.expansiones td{
+    border: 2px solid #a7a7a7;
+    color: white;
+    background-color: #333;
+    border-radius: 60px;
+}
+table.expansiones th{
+    border: 2px solid #a7a7a7;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+table.expansiones td.foto:hover{
+    background-color: #A81700;
+    transition: 1s ease;
+}
+
+/*Fielset*/
+fieldset{
+    padding: 10px;
+}
